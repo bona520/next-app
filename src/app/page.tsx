@@ -1,9 +1,13 @@
-import React from 'react'
-
-const page = () => {
+'use client'
+ 
+import { useRouter } from 'next/navigation'
+ 
+export default function Page() {
+  const router = useRouter()
+ 
   return (
-    <div className="w-screen h-screen bg-pink-600">page</div>
+    <button type="button" onClick={() => router.push('/dashboard')}>
+      Dashboard
+    </button>
   )
 }
-
-export default page
